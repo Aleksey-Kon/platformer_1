@@ -12,7 +12,11 @@ public class PlayerConroller : MonoBehaviour
     }
     public void Jimp()
     {
-        _rb.AddForce(new Vector2(0, _jump), ForceMode2D.Impulse);
+        if (_rb.velocity.y <= 0.2f && _rb.velocity.y >= -0.2f)
+        {
+            _rb.AddForce(new Vector2(0, _jump), ForceMode2D.Impulse);
+            _animator.SetTrigger("Jump");
+        }
     }
     private void PlayerScale(int i)
     {
@@ -28,8 +32,7 @@ public class PlayerConroller : MonoBehaviour
         {
             PlayerScale(direction);
         }
-        _rb.velocity = new Vector2(_speed * direction, 0);
-        //_rb.AddForce(new Vector2(_speed * direction, 0), ForceMode2D.Force);
+        _rb.AddForce(new Vector2(_speed * direction, 0), ForceMode2D.Force);
         _animator.SetFloat("Run", 1f);
     }
     private void FixedUpdate()
