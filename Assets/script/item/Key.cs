@@ -11,9 +11,12 @@ public class Key : MonoBehaviour
     {
         PlayerConroller.OnKeyPickUp -= PickUp;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         _PossiblePickUp = true;
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (collision.gameObject.tag == "Player")
         {
             _animator.SetBool("KeyApproach", true);
@@ -27,6 +30,7 @@ public class Key : MonoBehaviour
     public void PickUp()
     {
         if (_PossiblePickUp){
+            _PossiblePickUp = false;
             itemstorage.AddKeys(gameObject, 1);
             Destroy(gameObject, 0.5f);
         }

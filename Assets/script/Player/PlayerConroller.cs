@@ -45,6 +45,7 @@ public class PlayerConroller : MonoBehaviour
     public void PlayerKeyPickUp()
     {
         OnKeyPickUp?.Invoke();
+        _animator.SetTrigger("Sneaking");
     }
     private void FixedUpdate()
     {
