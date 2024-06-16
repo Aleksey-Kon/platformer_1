@@ -951,7 +951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 538446731}
   _speed: 5
-  _jump: 6
+  _jump: 8
   _input: 0
   _animator: {fileID: 538446724}
 --- !u!114 &538446730
@@ -3870,6 +3870,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5040275077789473939, guid: c1b9b3716098b4e41b5518ac7ca185fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5093138371503654410, guid: c1b9b3716098b4e41b5518ac7ca185fa, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3888,7 +3892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8405580097221154914, guid: c1b9b3716098b4e41b5518ac7ca185fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.33
       objectReference: {fileID: 0}
     - target: {fileID: 8405580097221154914, guid: c1b9b3716098b4e41b5518ac7ca185fa, type: 3}
       propertyPath: m_LocalRotation.w

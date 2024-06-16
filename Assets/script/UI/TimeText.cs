@@ -9,6 +9,6 @@ public class TimeText : MonoBehaviour
         _timer += Time.deltaTime;
         float minutes = Mathf.FloorToInt(_timer / 60);
         float seconds = Mathf.FloorToInt(_timer % 60);
-        _timetext.text = $"{minutes}:{seconds}";
+        _timetext.text = string.Format("{0:0}:{1:00}", minutes, seconds);
     }
 }
