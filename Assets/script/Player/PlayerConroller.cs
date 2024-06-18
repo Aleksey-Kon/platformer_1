@@ -9,6 +9,7 @@ public class PlayerConroller : MonoBehaviour
     private bool _right = true;
 
     public static event Action OnKeyPickUp;
+    public static event Action OnDoorOpen;
     public void Jimp()
     {
         if (_rb.velocity.y <= 0.2f && _rb.velocity.y >= -0.2f)
@@ -46,6 +47,10 @@ public class PlayerConroller : MonoBehaviour
     {
         OnKeyPickUp?.Invoke();
         _animator.SetTrigger("Sneaking");
+    }
+    public void PlayerDoorOpen()
+    {
+        OnDoorOpen?.Invoke();
     }
     private void FixedUpdate()
     {

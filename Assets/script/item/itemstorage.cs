@@ -3,7 +3,7 @@ using UnityEngine;
 public class itemstorage : MonoBehaviour
 {
     private static int _keys;
-    public int Keys => _keys;
+    public static int Keys => _keys;
     public static int Coin {  get; private set; }
     public static event Action<string> OnKeyText;
     public static event Action<string> OnCoinText;
