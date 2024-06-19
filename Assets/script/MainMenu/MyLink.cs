@@ -7,4 +7,8 @@ public class MyLink : MonoBehaviour
     public void DonationAlerts(string url){
         Application.OpenURL(url);
     }
+    public void YouTube(string url)
+    {
+        Application.OpenURL(url);
+    }
 }
