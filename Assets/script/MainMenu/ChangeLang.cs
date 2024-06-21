@@ -10,6 +10,7 @@ public class ChangeLang : MonoBehaviour
         if(Application.systemLanguage == SystemLanguage.Russian) PlayerPrefs.SetInt("Lang", 1);
         else if(Application.systemLanguage == SystemLanguage.English) PlayerPrefs.SetInt("Lang", 0);
         ChangeLangText();
+        //Screen.SetResolution(16, 9, true);
     }
     public void ChangeLangText()
     {

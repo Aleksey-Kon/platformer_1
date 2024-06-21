@@ -37,9 +37,10 @@ public class PlayerConroller : MonoBehaviour
         {
             PlayerScale(direction);
         }
-        _rb.AddForce(new Vector2(_speed * direction, 0), ForceMode2D.Force);
+        //_rb.AddForce(new Vector2(_speed * direction, 0), ForceMode2D.Force);
         //_rb.AddForce(, ForceMode.Acceleration);
         //_rb.Seta
+        transform.Translate(new Vector3(_speed * direction * Time.deltaTime, 0, 0));
         _animator.SetFloat("Run", 1f);
     }
     #endregion
