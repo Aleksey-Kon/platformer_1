@@ -7,7 +7,9 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetFloat("MusicValue", music.MusicValue);
         PlayerPrefs.SetFloat("AudioValue", Audio.AudioValue);
         PlayerPrefs.SetInt("Lang", LangButton.Lang);
+        PlayerPrefs.SetInt("Fullscreen", FullscreenToggle.FullScreen);
         PlayerPrefs.Save();
         _script.ChangeLangText();
+        FullscreenToggle.SetFullscreen(FullscreenToggle.FullScreen);
     }
 }
