@@ -5,12 +5,9 @@ public class ChangeLang : MonoBehaviour
     [SerializeField] private string[] _langRu, _langEn;
     private int Lang;
     [SerializeField] private TMP_Text[] _text;
-    private void Awake()
+    private void Start()
     {
-        if(Application.systemLanguage == SystemLanguage.Russian) PlayerPrefs.SetInt("Lang", 1);
-        else if(Application.systemLanguage == SystemLanguage.English) PlayerPrefs.SetInt("Lang", 0);
         ChangeLangText();
-        //Screen.SetResolution(16, 9, true);
     }
     public void ChangeLangText()
     {
